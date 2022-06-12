@@ -1,4 +1,4 @@
-name: Notify on Issue 
+name: Notify on Issue on Slack 
 on:
   issues:
     types: [opened]
