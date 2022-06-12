@@ -1,4 +1,4 @@
-https://github.com/MurtajaKadiyani/react-app/workflows/CI/badge.svg?branch=develop&event=push
+[![CI](https://github.com/MurtajaKadiyani/react-app/actions/workflows/ci.yml/badge.svg?branch=develop&event=push)](https://github.com/MurtajaKadiyani/react-app/actions/workflows/ci.yml)
 
 # Getting Started with Create React App
 
