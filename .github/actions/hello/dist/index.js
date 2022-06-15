@@ -8865,7 +8865,7 @@ const github = __nccwpck_require__(5438);
 
 try
 {
-  throw(new Error("Some error message"));
+  //throw(new Error("Some error message"));
   const name = core.getInput("who-to-greet");
   console.log('Hello ${name}');
 
