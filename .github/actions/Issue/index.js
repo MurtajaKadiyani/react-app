@@ -1,14 +1,14 @@
-const core = require('@actions/core');
-const github = require('@actions/github');
+const core = require("@actions/core");
+const github = require("@actions/github");
 
 async function run()
 {
 try
 {
-    const token = core.getInput('token');
-    const title = core.getInput('title');
-    const body = core.getInput('body');
-    const assignees = core.getInput('assignees');
+    const token = core.getInput("token");
+    const title = core.getInput("title");
+    const body = core.getInput("body");
+    const assignees = core.getInput("assignees");
 
     const octokit = new github.GitHub(token);
     const response = await octokit.rest.issues.create
@@ -19,7 +19,7 @@ try
           ...github.context.repo,
           title,
           body,
-          assignees: assignees ? assignees.split('\n') : undefined
+          assignees: assignees ? assignees.split("\n") : undefined
         }
     );
 
@@ -27,7 +27,7 @@ try
 }
 catch
 {
-    core.setFailed(error.message)
+    core.setFailed(error.message);
 }
 }
 
