@@ -12,7 +12,6 @@ jobs:
           body: Body
           assignees: |
             MurtajaKadiyani
-            Murtaja123
       - run: |
           echo ${{ steps.issue.outputs.issue }}
       - uses: ./.github/actions/hello

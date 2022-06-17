@@ -12,7 +12,7 @@ try
 
     const octokit = new github.getOctokit(token);
     const {owner, repo} =  github.context.repo;
-    const response = await octokit.rest.issues.create
+    const response = await octokit.issues.create
     (
         {
           //owner: github.context.repo.owner,
