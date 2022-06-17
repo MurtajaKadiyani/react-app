@@ -27,7 +27,7 @@ try
 
     core.setOutput("issue",JSON.stringify(response.data));
 }
-catch
+catch (error)
 {
     core.setFailed(error.message);
 }

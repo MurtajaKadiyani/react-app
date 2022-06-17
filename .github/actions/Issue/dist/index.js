@@ -8873,12 +8873,14 @@ try
     const assignees = core.getInput("assignees");
 
     const octokit = new github.getOctokit(token);
+    const {owner, repo} =  github.context.repo;
     const response = await octokit.rest.issues.create
     (
         {
           //owner: github.context.repo.owner,
           //repo: github.context.repo.repo,
-          ...github.context.repo,
+          owner,
+          repo,
           title,
           body,
           assignees: assignees ? assignees.split("\n") : undefined
@@ -8887,7 +8889,7 @@ try
 
     core.setOutput("issue",JSON.stringify(response.data));
 }
-catch
+catch (error)
 {
     core.setFailed(error.message);
 }
