@@ -3,7 +3,7 @@
 require_once 'vendor/autoload.php';
 WpOrg\Requests\Autoload::register();
 
-var_dump($arg);
+var_dump($argv);
 var_dump($_ENV);
 
 // $response = Requests::Post
